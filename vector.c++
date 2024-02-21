@@ -16,6 +16,7 @@ int main()
     
     vector<int> arr;
     int n; 
+    cout << "enter the size of vector : 101";
     cin>>n;
     for (int i = 0; i < n; i++)
     {
@@ -23,6 +24,8 @@ int main()
       cin>>x;
       arr.push_back(x);
     }
+
+    printVec(arr);
     
 
     
