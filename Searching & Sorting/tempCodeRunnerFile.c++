@@ -1,1 +1,2 @@
-s+(e-s)/2
+
+  return target;
