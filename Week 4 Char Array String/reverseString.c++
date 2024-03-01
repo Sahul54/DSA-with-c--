@@ -22,6 +22,8 @@ void reverse(char ch[], int size){
 int main()
 {
   char ch[100];
+
+
   cin.getline(ch,100);
   cout<<"Before : "<<ch<<endl;
   int len = findlength(ch,100);
