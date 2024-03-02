@@ -10,9 +10,9 @@ int findlength(char ch[], int size){
   return index; 
 }
 
-bool cheakPalindrome(char ch[], int size){
+bool cheakPalindrome(char ch[], int len){
   int i = 0;
-  int j = size - 1;
+  int j = len - 1;
    while (i <= j)
    {
     if (ch[i] == ch[j])
@@ -36,11 +36,11 @@ int main()
   cin.getline(ch, 100);
 
   int len = findlength(ch,100);
-  cout<<len;
+  // cout<<len;
   
-  bool a = cheakPalindrome(ch, len);
-  cout<<a <<endl;
-  if (a == 0)
+   cheakPalindrome(ch, len);
+
+  if (cheakPalindrome)
   {
     cout<<"invalid Paildrome" <<endl;
   }
