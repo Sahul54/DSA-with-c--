@@ -32,11 +32,11 @@ int main()
   // int* ptr3 = &b;  // copy pointer
   // cout<<*ptr3<< endl;
 
-  int q = 1;
-  int *p = &q;
-  cout<<&p <<endl;
-  p = p+1;
-  cout<<p<<endl;
+  // int q = 1;
+  // int *p = &q;
+  // cout<<&p <<endl;
+  // p = p+1;
+  // cout<<p<<endl;
 
   // int arr[2] = {1,2};
   // arr= arr+1; //error
@@ -54,10 +54,22 @@ int main()
   // int *ptr = arr;
   // cout<<"Print : " <<ptr <<endl;  // array ka base address Print hon gya
 
-  char ch = 'a';
-  char *cptr = &ch;
-  cout<<cptr<<endl;
+  // char ch = 'a';
+  // char *cptr = &ch;
+  // cout<<cptr<<endl;
 
+
+// ---------------POINTER l-2-----------
+
+// char ch[10] = "rahul";
+// char (*ptr)[1] = &ch;
+// cout<<(*ptr)[1];
+
+int arr[4] = {1,2,3,4};
+cout<<arr[3]<<endl;
+int(*ptr)[4] = &arr;
+// cout<<ptr;
+cout<<(*ptr)[3];
 
     return 0;
 }
