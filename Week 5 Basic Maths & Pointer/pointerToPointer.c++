@@ -22,14 +22,15 @@ int main()
 
   int a =6;
   int * ptr = &a;
-  cout<<ptr<<endl;
-  cout<<&ptr<<endl;
-  cout<<*ptr<<endl;
+  cout<<"size: "<<sizeof(*ptr)<<endl;
+  // cout<<ptr<<endl;
+  // cout<<&ptr<<endl;
+  // cout<<*ptr<<endl;
 
-  solve(ptr);
-  cout<<ptr<<endl;
-  cout<<&ptr<<endl;
-  cout<<*ptr<<endl;
+  // solve(ptr);
+  // cout<<ptr<<endl;
+  // cout<<&ptr<<endl;
+  // cout<<*ptr<<endl;
   
 
     return 0;
