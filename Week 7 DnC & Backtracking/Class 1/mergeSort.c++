@@ -89,8 +89,6 @@ void mergeSort(int arr[], int s, int e){
   mergeSort(arr, mid+1, e);
 
   // merge
-  merge(arr, s, e);
-
 
 }
 int main()
