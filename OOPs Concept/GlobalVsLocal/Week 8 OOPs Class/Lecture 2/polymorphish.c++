@@ -70,6 +70,9 @@ int main()
     Vector v2(4, 5);
 
     // v1 + v2;
+
+// 
+    hiiii
     // v1 - v2;
 
     ++v1;
@@ -77,3 +80,13 @@ int main()
     v1.display();
     return 0;
 }
+
+/*
+ using namespaces std;
+ int main()
+ {
+    int n;
+    cout<<" enter th number that you are want tt prot "
+ }
+
+*/
