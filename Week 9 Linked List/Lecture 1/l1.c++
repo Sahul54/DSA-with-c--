@@ -74,37 +74,37 @@ int findLength(Node* &head ) {
         return len;
 }
 
-// void insertAtPosition(int data, int position, Node* &head, Node* &tail) {
-//         int len = findLength(head);
+void insertAtPosition(int data, int position, Node* &head, Node* &tail) {
+        int len = findLength(head);
         
-//         if(position == 1) {
-//                 insertAtHead(head, tail , data);
-//                 return;
-//         }
-//         else if(position > len) {
-//                 insertAtTail(head, tail, data);
-//                 return;
-//         }
-//         else {
-//             Node* newNode = new Node(data);
+        if(position == 1) {
+                insertAtHead(head, tail , data);
+                return;
+        }
+        else if(position > len) {
+                insertAtTail(head, tail, data);
+                return;
+        }
+        else {
+            Node* newNode = new Node(data);
             
-//             Node* prev = NULL;
-//             Node* curr = head;
-//             while(position != 1) {
-//                 position--;
-//                 prev = curr;
-//                 curr = curr->next;
-//             }
+            Node* prev = NULL;
+            Node* curr = head;
+            while(position != 1) {
+                position--;
+                prev = curr;
+                curr = curr->next;
+            }
             
-//             //step3:
-//             newNode -> next = curr;
+            //step3:
+            newNode -> next = curr;
 
-//             //step4:
-//             prev -> next = newNode;
+            //step4:
+            prev -> next = newNode;
             
-//         }
+        }
         
-// }
+}
 
 
 
