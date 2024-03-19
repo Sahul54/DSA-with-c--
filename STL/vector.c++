@@ -13,6 +13,7 @@ void printVec(vector<int> arr){
 int main()
 {   
   // vector like a array  but vector store in dynamic size-----------
+  // 
     
     // vector<int> arr;
     // int n; 
