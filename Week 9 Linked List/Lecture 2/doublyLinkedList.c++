@@ -120,20 +120,63 @@ void insertAtPosition(Node* &head, Node* &tail, int data, int position){
   }
 }
 
+// delete Node
+
+// delete from head
+void deleteNode(Node* &head, Node* &tail, int Position){
+  
+  int len = length(head);
+  if(head == NULL){
+    // LL is empty
+    cout<<"DLL is empty can't delete"<<endl;
+    return;
+  }
+
+  if(head == tail){
+    Node* temp = head;
+    delete temp;
+    head = NULL;
+    tail = NULL;
+    return;
+  }
+
+  if(Position == 1){
+    // delete from head
+    Node* temp = head;
+    head = head->next;
+    temp->next = NULL;
+    head->prev = NULL;
+    delete temp;
+  }
+
+  else if(Position == len){
+    // delete from head
+    Node* prevNode = tail->prev;
+    prevNode->next = NULL;
+    tail -> prev = NULL;
+    delete tail;
+    tail = prevNode;
+  }
+}
+
+
 int main()
 {
   Node* head = NULL;
   Node* tail = NULL;
   insertAtHead(head, tail, 50);
-  insertAtHead(head, tail, 40);
-  insertAtHead(head, tail, 30);
-  insertAtHead(head, tail, 20);
-  insertAtHead(head, tail, 10);
+  // insertAtHead(head, tail, 40);
+  // insertAtHead(head, tail, 30);
+  // insertAtHead(head, tail, 20);
+  // insertAtHead(head, tail, 10);
   // insertAtTail(head, tail, 100);
-  // print(head);
+  print(head);
   cout<<endl;
 
-  insertAtPosition(head, tail, 1000, 2);
+  // insertAtPosition(head, tail, 1000, 2);
+  // print(head);
+
+  deleteNode(head, tail, 1);
   print(head);
     return 0;
 }
