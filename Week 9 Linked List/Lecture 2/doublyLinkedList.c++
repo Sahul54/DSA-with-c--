@@ -157,6 +157,27 @@ void deleteNode(Node* &head, Node* &tail, int Position){
     delete tail;
     tail = prevNode;
   }
+
+  else{
+    // delete at Postion
+    // set prevNode/ curr Node/ Next Node
+    Node* prevNode = NULL;
+    Node* currNode = head;
+    while (Position != 1)
+    {
+      Position--;
+      prevNode = currNode;
+      currNode = currNode-> next;
+    }
+    Node* nextNode = currNode->next;
+
+    prevNode->next = nextNode;
+    currNode->prev = NULL;
+    currNode->next = NULL;
+    nextNode->prev = prevNode;
+    delete currNode;
+    
+  }
 }
 
 
@@ -165,18 +186,18 @@ int main()
   Node* head = NULL;
   Node* tail = NULL;
   insertAtHead(head, tail, 50);
-  // insertAtHead(head, tail, 40);
-  // insertAtHead(head, tail, 30);
-  // insertAtHead(head, tail, 20);
-  // insertAtHead(head, tail, 10);
-  // insertAtTail(head, tail, 100);
+  insertAtHead(head, tail, 40);
+  insertAtHead(head, tail, 30);
+  insertAtHead(head, tail, 20);
+  insertAtHead(head, tail, 10);
+  insertAtTail(head, tail, 100);
   print(head);
   cout<<endl;
 
   // insertAtPosition(head, tail, 1000, 2);
   // print(head);
 
-  deleteNode(head, tail, 1);
+  deleteNode(head, tail, 2);
   print(head);
     return 0;
 }
