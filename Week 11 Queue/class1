@@ -385,7 +385,38 @@ int main()
     // cout << "Front Element: " << q.getFront() << endl;
     // cout << "Rear element: " << q.getRear() << endl;
 
-    
+    // circular Queue
+    // CircularQueue q(5);
+    // // q.print();
+    // q.push(10);
+    // q.push(10);
+    // q.push(10);
+    // q.push(10);
+    // q.push(10);
+    // // q.push(69);
+    // q.pop();
+    // q.pop();
+    // q.pop();
+    // q.pop();
+    // q.push(69);
+    // q.push(190);
+    // q.push(1902);
+    // q.push(190);
+    // q.push(0);
+    // q.print();
+    // q.pop();
+    // q.pop();
+    // q.pop();
+    // q.pop();
+    // q.print();
+    // q.pop();
+    // q.print();
+    // q.pop();
+
+    // dequeue
+    //(Doubly Ended Queue)
+    // front se pop push and rear se push pop
+    // #include<dequeu>->include
     deque<int> dq;
     dq.push_back(10);
     dq.push_front(20);
