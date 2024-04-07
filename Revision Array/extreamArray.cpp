@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void printExtreamArray(int arr[], int size){
+void printExtrea    mArray(int arr[], int size){
     int left = 0;
     int right = size-1;
 
