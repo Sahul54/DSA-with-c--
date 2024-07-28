@@ -8,9 +8,9 @@ class Node{
     Node* right;
 
     Node (int val){
-        this -> data = val;
-        this -> data = NULL;
-        this -> data = NULL;
+        this->data = val;
+        this->data = NULL;
+        this->data = NULL;
     }
 };
 
@@ -38,7 +38,7 @@ Node* createTree(){
 int main(){
    
    Node* root = createTree();
-   cout<<root-> data<<endl;
+   cout<<root->data<<endl;
 
   return 0;
 }
