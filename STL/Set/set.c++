@@ -1,33 +1,34 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Person
-{
-    public:
-    int age;
-    string name;
+// class Person
+// {
+//     public:
+//     int age;
+//     string name;
 
-    bool operator < (const Person &other)const{
-        return age < other.age;
-    }
+//     bool operator < (const Person &other)const{
+//         return age < other.age;
+//     }
 
-};
+// };
 
 int main(){
-    // Class
-    set<Person>s;
-    Person p1, p2, p3;
-    p1.age = 10, p1.name = "rohit";
-    p2.age = 50, p2.name = "kohit";
-    p3.age = 12, p3.name = "sohit";
+//     // Class
+//     set<Person>s;
+//     Person p1, p2, p3;
+//     p1.age = 10, p1.name = "rohit";
+//     p2.age = 50, p2.name = "kohit";
+//     p3.age = 12, p3.name = "sohit";
 
-    s.insert(p1);
-    s.insert(p2);
-    s.insert(p3);
+//     s.insert(p1);
+//     s.insert(p2);
+//     s.insert(p3);
+
       
-    for(auto it=s.begin(); it != s.end(); it++){
-        cout<<it->age<<" "<<it->name<<endl;
-    }
+    // for(auto it=s.begin(); it != s.end(); it++){
+    //     cout<<it->age<<" "<<it->name<<endl;
+    // }
 
 
 
@@ -38,15 +39,16 @@ int main(){
 
 
     // set<int>s = {1,3,45,63,1,2};
-    // set<int> s;
-    // // set<int, greater<int>> s;
-    // s.insert(10);
-    // s.insert(101);
-    // s.insert(12);
-    // s.insert(13);
-    // s.insert(13);
-    // s.insert(10);
+    set<int> s;
+    // set<int, greater<int>> s;
+    s.insert(10);
+    s.insert(101);
+    s.insert(12);
+    s.insert(13);
+    s.insert(13);
+    s.insert(10);
 
+    
     // s.clear();
     
     // find()
