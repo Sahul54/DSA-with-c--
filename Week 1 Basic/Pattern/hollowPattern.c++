@@ -6,9 +6,12 @@ int main(){
     // *     *
     // *     *
     // * * * *
-    for(int i = 0; i<4; i++){
-        for(int j = 0; j<4; j++){
-            if(i == 0 || j == 0 || i == 3 || j == 3){
+    int n;
+    cout<<"Enter the no row and col: ";
+    cin>>n;
+    for(int row = 0; row<n; row++){
+        for(int col= 0; col<n; col++){
+            if(row == 0 ||col == 0 || row == n-1 ||col == n-1){
                 cout<<"* ";
             }
             else{
