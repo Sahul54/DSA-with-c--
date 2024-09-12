@@ -8,9 +8,6 @@ int countVilly(string &str){
             count += 1;
         }
         else if(str[i] == 'D'){
-            // if (count ==1){
-            //     break;
-            // }
             count -= 1;
         }
 
@@ -24,3 +21,26 @@ string str = "UDDDUDUU";
 cout<<countVilly(str);
 return 0;
 }
+
+
+
+// public class Main {
+//     public static int countVilly(String str) {
+//         int count = 1;
+//         for (int i = 0; i < str.length(); i++) {
+//             if (str.charAt(i) == 'U') {
+//                 count += 1;
+//             } else if (str.charAt(i) == 'D') {
+//                 count -= 1;
+//             }
+//         }
+//         return count;
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "UDDDUDUU";
+//         System.out.println(countVilly(str));
+//     }
+// }
+
+
