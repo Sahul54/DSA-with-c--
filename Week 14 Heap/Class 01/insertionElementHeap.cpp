@@ -49,7 +49,46 @@ class Heap{
         cout<<endl;
     }
 
+     int deleteHeap(){
+        int answer = arr[1];
+
+        // replacement 
+        arr[1] = arr[size];
+
+        // last element ko delete kro or uski orginal position mai le kar aawo
+        size--;
+
+        int index = 1;
+        while(index < size){
+            int leftIndex = 2*index;
+            int rightIndex = 2*index+1;
+            int largestIndex = index;
+
+            // find krna hai sabse bada element kon hai
+            if(leftIndex <= size && arr[largestIndex] < arr[leftIndex]){
+                largestIndex = leftIndex;
+            }
+            if(rightIndex <= size && arr[largestIndex] < arr[rightIndex]){
+                largestIndex = rightIndex;
+            }
+
+            //  no change;
+            if(index == largestIndex){
+                break;
+            }
+            else{
+                swap(arr[index], arr[largestIndex]);
+                index = largestIndex;
+            }
+        }
+        return answer;
+    }
+
+   
+
 };
+
+
 
 int main(){
     int capacity = 5;
@@ -62,6 +101,11 @@ int main(){
     h.insert(11);
     h.insert(6);
 
+    cout<<"Printing Heap : "<<endl;
+    h.PrintHeap();
+
+    cout<<"Delete heap Element: "<<h.deleteHeap();
+    
     cout<<"Printing Heap : "<<endl;
     h.PrintHeap();
 return 0;
