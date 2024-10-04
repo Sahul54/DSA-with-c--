@@ -88,25 +88,58 @@ class Heap{
 
 };
 
+void heapify(int *arr, int n, int index){
+    int leftIndex = 2*index;
+    int rightIndex = 2*index+1;
+    int largestIndex = index;
+
+    // Teno mai sabse max ko le kr aawo
+    if(largestIndex <= n && arr[leftIndex] > arr[largestIndex]){
+        largestIndex = leftIndex;
+    }
+    if(largestIndex <= n && arr[rightIndex] > arr[largestIndex]){
+        largestIndex = rightIndex;
+    }
+
+    // swap kr do
+    if(index != largestIndex){
+        swap(arr[index], arr[largestIndex]);
+
+        // ab rec ko de do
+        index = largestIndex;
+        heapify(arr, n, index);
+    }
+}
+
 
 
 int main(){
-    int capacity = 5;
-    Heap h(capacity);
+    // int capacity = 5;
+    // Heap h(capacity);
 
-    // Inseryiion of element
-    h.insert(10);
-    h.insert(20);
-    h.insert(5);
-    h.insert(11);
-    h.insert(6);
+    // // Inseryiion of element
+    // h.insert(10);
+    // h.insert(20);
+    // h.insert(5);
+    // h.insert(11);
+    // h.insert(6);
 
-    cout<<"Printing Heap : "<<endl;
-    h.PrintHeap();
+    // cout<<"Printing Heap : "<<endl;
+    // h.PrintHeap();
 
-    cout<<"Delete heap Element: "<<h.deleteHeap();
+    // cout<<"Delete heap Element: "<<h.deleteHeap();
     
+    // cout<<"Printing Heap : "<<endl;
+    // h.PrintHeap();
+
+    int arr[] = {0, 12, 50, 60, 13};
+    int n = 5;
+    int index = 1;
+
+    heapify(arr, n, 1);
+
     cout<<"Printing Heap : "<<endl;
     h.PrintHeap();
+
 return 0;
 }
