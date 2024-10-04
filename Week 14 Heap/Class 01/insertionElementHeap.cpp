@@ -83,37 +83,67 @@ class Heap{
         }
         return answer;
     }
-
    
 
 };
 
-void heapify(int *arr, int n, int index){
-    int leftIndex = 2*index;
-    int rightIndex = 2*index+1;
+void heapify(int *arr, int n, int index) {
+    int leftIndex = 2 * index;
+    int rightIndex = 2 * index + 1;
     int largestIndex = index;
 
-    // Teno mai sabse max ko le kr aawo
-    if(largestIndex <= n && arr[leftIndex] > arr[largestIndex]){
+    // Ensure we are within bounds before accessing
+    if (leftIndex <= n && arr[leftIndex] > arr[largestIndex]) {
         largestIndex = leftIndex;
     }
-    if(largestIndex <= n && arr[rightIndex] > arr[largestIndex]){
+    if (rightIndex <= n && arr[rightIndex] > arr[largestIndex]) {
         largestIndex = rightIndex;
     }
 
-    // swap kr do
-    if(index != largestIndex){
+    // Swap if the largest index is not the current index
+    if (largestIndex != index) {
         swap(arr[index], arr[largestIndex]);
+        // Recursively heapify the affected subtree
+        heapify(arr, n, largestIndex);
+    }
+}
 
-        // ab rec ko de do
-        index = largestIndex;
+void buildHeap(int arr[], int n) {
+    for (int index = n / 2; index > 0; index--) {
         heapify(arr, n, index);
     }
 }
 
-
+void heapSort(int arr[], int n) {
+    // Build the heap
+    buildHeap(arr, n);
+    
+    // One by one extract elements from heap
+    while (n > 1) {
+        swap(arr[1], arr[n]); // Swap the root of the heap with the last element
+        n--; // Reduce the size of heap
+        heapify(arr, n, 1); // Heapify the root element again
+    }
+}
 
 int main(){
+    int arr[] = {-1, 4, 45, 6, 7, 9, 8};
+    int n = 6;
+
+    buildHeap(arr, n);
+    cout<<"Printing Heap: "<<endl;
+    for(int i=1; i<=n; i++){
+        cout<<arr[i]<<" ";
+    }
+
+    cout<<endl;
+    heapSort(arr, n);
+    cout<<"Printing Heap: "<<endl;
+    for(int i=1; i<=n; i++){
+        cout<<arr[i]<<" ";
+    }
+
+
     // int capacity = 5;
     // Heap h(capacity);
 
@@ -132,14 +162,7 @@ int main(){
     // cout<<"Printing Heap : "<<endl;
     // h.PrintHeap();
 
-    int arr[] = {0, 12, 50, 60, 13};
-    int n = 5;
-    int index = 1;
-
-    heapify(arr, n, 1);
-
-    cout<<"Printing Heap : "<<endl;
-    h.PrintHeap();
+    
 
 return 0;
 }
