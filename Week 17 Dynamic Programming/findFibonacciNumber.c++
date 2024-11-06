@@ -11,16 +11,17 @@ int findFib(int n){
 
 }
 
-//  Top Down Approch
+//  Top Down Approch/ Memorization approch
 int solveUsingMem(int n, vector<int> &dp){
-    // Base case
-    if(n==0 || n==1){
-        dp[n] = n;
-        return dp[n];
-    }
+        // Base case
+        if(n==0 || n==1){
+            dp[n] = n;
+            return dp[n];
+        }
+    
         // step 3: if ans exixt then use it
         if(dp[n] != -1){
-            return  dp[n];
+            return dp[n];
         }
 
         // step 2: store and return ans
